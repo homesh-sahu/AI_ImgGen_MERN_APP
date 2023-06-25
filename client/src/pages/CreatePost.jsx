@@ -21,7 +21,7 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
         const response = await fetch(
-          "https://ai-imagegen-app.onrender.com/api/v1/dalle", //Calling our api from backend
+          "https://http://localhost:8080/api/v1/dalle", //Calling our api from backend
           {
             method: "POST",
             headers: {
@@ -50,7 +50,7 @@ const CreatePost = () => {
       setLoading(true);
 
       try {
-        const response = await fetch("https://ai-imagegen-app.onrender.com/api/v1/post", {
+        const response = await fetch("http://localhost:8080/api/v1/post", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
