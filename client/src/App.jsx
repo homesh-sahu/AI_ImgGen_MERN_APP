@@ -9,6 +9,7 @@ const App = () => {
     <BrowserRouter>
       <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]">
         <Link to="/">
+          <p className="font-semibold text-sm">powered by</p>
           <img
             src={logo}
             alt="Error_code : 404"
@@ -17,15 +18,19 @@ const App = () => {
         </Link>
         <Link
           to="/create-post"
-          className="font-inter font-medium bg-[#6469ff] text-white px-4 py-2 rounded-md"
+          className="flex items-center justify-center p-0.5 mr-2 font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 hover:from-purple-600 hover:to-blue-500 hover:text-white hover:shadow-lg font-inter"
         >
-          Create
+          <span className="px-5 py-2.5 transition-all ease-in duration-275 bg-white rounded-md group-hover:bg-opacity-0">
+            Create
+          </span>
         </Link>
       </header>
-      <main className='sm:p-8 px-4 py-8 w-full bg-[#f9fafe] min-h-[calc(100vh - 73px)]'>  {/* View height - Navbar height */}
+      <main className="sm:p-8 px-4 py-8 w-full bg-[#f9fafe] min-h-[calc(100vh - 73px)]">
+        {" "}
+        {/* View height - Navbar height */}
         <Routes>
-          <Route path="/" element={ <Home /> } />
-          <Route path="/create-post" element={ <CreatePost /> } />
+          <Route path="/" element={<Home />} />
+          <Route path="/create-post" element={<CreatePost />} />
         </Routes>
       </main>
     </BrowserRouter>
