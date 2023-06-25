@@ -21,7 +21,7 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
         const response = await fetch(
-          "https://http://localhost:8080/api/v1/dalle", //Calling our api from backend
+          "http://localhost:8080/api/v1/dalle", //Calling our api from backend
           {
             method: "POST",
             headers: {

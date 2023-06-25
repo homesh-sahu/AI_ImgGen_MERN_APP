@@ -24,7 +24,7 @@ app.get("/", async (req, res) => {
 //Async function to initialise the server
 const startServer = async () => {
   try {
-    connectDB(process.env.MONGODB_URL); 
+    connectDB("mongodb://127.0.0.1:27017"); //MongoDB url is stored for deployment in process.env.MONGODB_URL
     app.listen(8080, () =>
       console.log("Server has started on port http://localhost:8080")
     );
