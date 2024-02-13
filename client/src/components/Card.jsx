@@ -7,7 +7,7 @@ const Card = ( { _id, prompt, name, photo } ) => {
   return (
     <div className="rounded-xl group relative shadow-card hover:shadow-cardhover card hover:p-1 border hover:border-[#00000052] transition-all ease-in duration-275">
       <img
-        className="w-full h-auto object-cover rounded-xl"
+        className="w-full h-auto object-cover rounded-xl hover:shadow-lg"
         src={photo}
         alt={prompt}
       />
